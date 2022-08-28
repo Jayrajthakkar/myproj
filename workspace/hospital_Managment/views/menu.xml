@@ -13,7 +13,7 @@
 
 	<record id="action_doctor"
 		model="ir.actions.act_window">
-		<field name="name">Specialist Doctors</field>
+		<field name="name">Doctors</field>
 		<field name="res_model">hospital.doctor</field>
 		<field name="view_mode">tree,form</field>
 	</record>
@@ -78,7 +78,7 @@
 
 		<menuitem id="doctpr_speciality_submenu"
 			name="Speciality"
-			parent="doctor_main_menu	"
+			parent="doctor_main_menu"
 			action="action_speciality"/>
 		
 

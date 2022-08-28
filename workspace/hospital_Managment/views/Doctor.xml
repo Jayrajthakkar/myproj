@@ -10,6 +10,7 @@
 				<field name="name"></field>
 				<field name="speciality_ids"></field>
 				<field name="patients_count"></field>
+				
 				 
 
 

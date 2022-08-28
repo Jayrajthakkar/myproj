@@ -18,11 +18,10 @@ class SpecialityDoctors(models.Model):
 
 	def _compute_patients_count(self):
 		for rec in self:
-			rec.patients_count = 0
+			# rec.patients_count = 0
 			patient = self.env['hospital.appointment'].search_count([('speciality_id.name','=',rec.speciality_ids.name)])
-			print("===================================...................>>>>>>>>",patient)
+			# print("===================================...................>>>>>>>>",patient)
 			rec.patients_count=patient 		
-
 
 class City(models.Model):
 	_name="hospital.city" #table name.
@@ -38,7 +37,29 @@ class Appointment(models.Model):
 	patient_id = fields.Many2one(comodel_name="hospital.patient",string="Patient")
 	speciality_id=fields.Many2one(comodel_name='hospital.speciality',string='Speciality')
 	doctor=fields.Char(string='Doctor')
+	verify_patient= fields.Selection([('registered','Registered'),('unregistered','Unregistered')],string='Verify')
+	
+	def verify(self):
+		res = self.verify_patient
+		a =""
+		message = 'Verification is: '+res
+		if res == 'registered':
+			a = "Verification successful"
+		else:
+			a = "Verification failed"
 
+		return{
+		'type':'ir.actions.client',
+		'tag':'display_notification',
+		'params':{
+		'message':message,
+		'type':a,
+		'sticky':False
+		}
+		}
+ 
+
+		
 	@api.model
 	def create(self,vals):
 		res = super(Appointment,self).create(vals)
@@ -47,7 +68,6 @@ class Appointment(models.Model):
 			res.doctor = data.name
 		 
 		return res 
-	   
 
 
 class HospitalPatient(models.Model):
