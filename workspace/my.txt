@@ -1,2 +1,2 @@
 source /usr/share/virtualenvwrapper/virtualenvwrapper.sh
-python3 odoo-bin --addons-path=addons/,/home/odoo/Desktop/myproj/workspace --xmlrpc-port 9072 -d v15_hospital_management
+python3 odoo-bin --addons-path=addons/,/home/odoo/Desktop/myproj/workspace --xmlrpc-port 9072 -d v15_hospital_Managment

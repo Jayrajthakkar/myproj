@@ -13,7 +13,7 @@
 				<button name="%(hospital_Managment.action_hospital_patient)d" string="Details" type="action" class='oe_highlight'/>
 
 				<button name="verify" string="Status" type="object"/>
-
+ 
 
 			</tree>
 			
@@ -30,21 +30,12 @@
 		<field name="arch" type="xml">
 			<form>
 				<sheet>
-				<!-- 	<div>
-						<button name="action_view_patientcount" 
-						type = 'object'
-						class= "oe_stat_button">
-							<div>
-								<field name='patient_count'/>
-								<span>Patient</span>
-							</div>
-						</button>
-					</div> -->
+				
 					<group>
 						
 						<field name="patient_id"></field>
 						<field name="speciality_id"></field>
-						<field name='verify_patient'></field>
+						<field name='verify_patient' ></field>
 					</group>
 				</sheet>
 			</form>
