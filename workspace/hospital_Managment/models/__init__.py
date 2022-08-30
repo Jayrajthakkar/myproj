@@ -1,4 +1,2 @@
-from . import Patient
-from . import Appointment
-from . import Speciality
-from . import SpecialityDoctors
+from . import Patient,Appointment,Speciality,SpecialityDoctors,Pharma,Prescription
+

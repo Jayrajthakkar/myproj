@@ -1,0 +1,45 @@
+<odoo>
+	#Pharma Tree view
+	
+	<record id="view_pharma_tree" model="ir.ui.view">
+
+		<field name="name">pharma.tree</field>
+		<field name="model">hospital.pharma</field>
+		<field name="arch" type="xml">
+			<tree>
+
+				<field name="name"></field>
+				<field name="manufacturer"></field>
+				<field name="manufacturer_site"></field>
+				<field name="medicines_stock"></field>
+
+ 			</tree>
+			
+		</field>
+
+	</record>
+
+	#Pharma Form view
+
+
+	<record id="view_pharma_form" model="ir.ui.view">
+
+		<field name="name">pharma.form</field>
+		<field name="model">hospital.pharma</field>
+		<field name="arch" type="xml">
+			<form>
+				<sheet>
+					<group>
+							<field name="name"></field>
+							<field name="manufacturer"></field>
+							<field name="manufacturer_site"></field>
+							<field name="medicines_stock"></field>				
+					</group>
+			 	</sheet>
+			</form>
+
+		</field>
+
+	</record>
+
+</odoo>
