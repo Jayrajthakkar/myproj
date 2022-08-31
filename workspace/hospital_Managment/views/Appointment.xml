@@ -33,9 +33,9 @@
 				
 					<group>
 						
-						<field name="patient_id"></field>
+						<field name="patient_id" widget='selection'></field>
 						<field name="speciality_id"></field>
-						<field name='verify_patient' ></field>
+						<field name='verify_patient' widget='radio'></field>
 					</group>
 				</sheet>
 			</form>

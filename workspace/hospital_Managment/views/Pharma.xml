@@ -11,7 +11,7 @@
 				<field name="name"></field>
 				<field name="manufacturer"></field>
 				<field name="manufacturer_site"></field>
-				<field name="medicines_stock"></field>
+				<field name="progress" widget='progressbar'></field>
 
  			</tree>
 			
@@ -33,7 +33,7 @@
 							<field name="name"></field>
 							<field name="manufacturer"></field>
 							<field name="manufacturer_site"></field>
-							<field name="medicines_stock"></field>				
+							<field name="progress"></field>				
 					</group>
 			 	</sheet>
 			</form>

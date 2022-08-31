@@ -10,4 +10,4 @@ class HospitalPharma(models.Model):
 	name = fields.Char(string='Medicines')
 	manufacturer = fields.Char(string='Manufacturer')
 	manufacturer_site = fields.Char(string='Manufacturer Website')
-	medicines_stock = fields.Integer(string='Available Stock')
+	progress = fields.Integer(string='Available Stock')
