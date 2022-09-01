@@ -30,12 +30,24 @@
 		<field name="arch" type="xml">
 			<form>
 				<sheet>
+					<div name='button_box' class='oe_button_box'>
+						<button name="action_view_patientcount" 
+							type = 'object'
+							class= "oe_stat_button" icon='fa-calendar'>
+							<div class='o_stat_info'>
+								<field name='patient_count' class='o_stat_value'/>
+								<span class='o_stat_text'>Patient</span>
+							</div>
+						</button>
+					</div>
 				
 					<group>
 						
 						<field name="patient_id" widget='selection'></field>
 						<field name="speciality_id"></field>
 						<field name='verify_patient' widget='radio'></field>
+						<field name='Medicaltest_ids' widget='many2many_tags'></field>
+						<field name='visit_charge'></field>
 					</group>
 				</sheet>
 			</form>

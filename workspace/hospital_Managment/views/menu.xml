@@ -64,6 +64,24 @@
 		<field name="res_model">hospital.prescription</field>
 		<field name="view_mode">tree,form</field>
 	</record>
+
+ #Labtest Action
+
+	<record id="action_labtest"
+		model="ir.actions.act_window">
+		<field name="name">Labtest</field>
+		<field name="res_model">hospital.labtest</field>
+		<field name="view_mode">tree,form</field>
+	</record>
+ 
+ #Bill Action
+
+	<record id="action_bill"
+		model="ir.actions.act_window">
+		<field name="name">Bill</field>
+		<field name="res_model">hospital.bill</field>
+		<field name="view_mode">tree,form</field>
+	</record>
  
  
 	#Menus
@@ -119,6 +137,16 @@
 			name="Prescription"
 			parent="hospital_main_menu"
 			action="action_prescription"/>
+	
+		<menuitem id="labtest_main_menu"
+			name="Medical test"
+			parent="hospital_main_menu"
+			action="action_labtest"/>
+	
+		<menuitem id="bill_main_menu"
+			name="Bill"
+			parent="hospital_main_menu"
+			action="action_bill"/>
 	
 
 </odoo>

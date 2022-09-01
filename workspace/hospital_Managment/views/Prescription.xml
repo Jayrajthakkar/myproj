@@ -28,21 +28,12 @@
 			<form>
 				<sheet>
 					<div name='button_box' class='oe_button_box'>
-						<button name="action_view_appointmentcount" 
+						<button name="action_view_medicinescount" 
 							type = 'object'
 							class= "oe_stat_button" icon='fa-calendar'>
 							<div class='o_stat_info'>
-								<field name='appointment_count' class='o_stat_value'/>
-								<span class='o_stat_text'>Appointment</span>
-							</div>
-						</button>
-					
-						<button name="action_view_patientcount" 
-							type = 'object'
-							class= "oe_stat_button" icon='fa-calendar'>
-							<div class='o_stat_info'>
-								<field name='patient_count' class='o_stat_value'/>
-								<span class='o_stat_text'>Patient</span>
+								<field name='medicines_count' class='o_stat_value'/>
+								<span class='o_stat_text'>Medicines</span>
 							</div>
 						</button>
 					</div>
