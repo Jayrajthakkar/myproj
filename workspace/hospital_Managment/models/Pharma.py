@@ -6,7 +6,6 @@ class HospitalPharma(models.Model):
 	_name="hospital.pharma" # table name.
 	_description="Hospital Pharma"
 
-
 	name = fields.Char(string='Medicines')
 	manufacturer = fields.Char(string='Manufacturer')
 	manufacturer_site = fields.Char(string='Manufacturer Website')

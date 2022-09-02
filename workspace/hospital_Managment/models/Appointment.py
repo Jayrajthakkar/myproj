@@ -4,6 +4,7 @@ from datetime import date
 class Appointment(models.Model):
 	_name="hospital.appointment" # table name.
 	_description="Patient Appointment"
+	_rec_name = 'patient_id'
 
 	patient_id = fields.Many2one(comodel_name="hospital.patient",string="Patient")
 	speciality_id=fields.Many2one(comodel_name='hospital.speciality',string='Speciality')
@@ -11,7 +12,6 @@ class Appointment(models.Model):
 	visit_charge = fields.Integer(string='Visit Charge',default=500)
 	verify_patient= fields.Selection([('registered','Registered'),('unregistered','Unregistered')],string='Verify')
 	patient_count = fields.Char(compute='_compute_patient_count',string="Petient Count")
-	Medicaltest_ids=fields.Many2many(comodel_name='hospital.labtest',string='Medical Test')
 	
 
 	def _compute_patient_count(self):

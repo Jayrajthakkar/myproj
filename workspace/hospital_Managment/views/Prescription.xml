@@ -39,6 +39,7 @@
 					</div>
 					<group>
 							<field name="patient_id" widget='selection'></field>
+							<field name="lab_test_ids"  widget='many2many_tags'></field>
 							<field name="medicines_ids"  widget='many2many_tags'></field>
 							<field name="doctor"></field>
 					</group>

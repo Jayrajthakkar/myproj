@@ -82,6 +82,16 @@
 		<field name="res_model">hospital.bill</field>
 		<field name="view_mode">tree,form</field>
 	</record>
+
+ #Change Appointment Action
+
+	<record id="action_changeappointment"
+		model="ir.actions.act_window">
+		<field name="name">Change Appointment</field>
+		<field name="res_model">change.appointment.wizard</field>
+		<field name="view_mode">form</field>
+		<field name='target'>new</field>
+	</record>
  
  
 	#Menus
@@ -128,6 +138,11 @@
 			parent="hospital_main_menu"
 			action="action_appointment"/>
 
+		<menuitem id="patient_appointment_submenu"
+			name="Appointment"
+			parent="patient_appointment"
+			action="action_appointment"/>
+
 		<menuitem id="pharma_main_menu"
 			name="Pharma Store"
 			parent="hospital_main_menu"
@@ -147,6 +162,12 @@
 			name="Bill"
 			parent="hospital_main_menu"
 			action="action_bill"/>
+
+		<menuitem id="changeappointment_main_menu"
+			name="Change Appointment"
+			parent="patient_appointment"
+			action="action_changeappointment"
+			sequence='100'/>
 	
 
 </odoo>

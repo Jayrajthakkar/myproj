@@ -9,11 +9,12 @@
 			<form>
 				<sheet>
 					<group>
-						
 						<field name="patient_id" widget='selection'></field>
-						<field name='visit_charge'></field>
+						<field name='visit_charge' readonly='1'></field>
 						<field name='medicines_charge'></field>
-						
+						<field name='lab_charge'></field>
+						<field name='total_amount'></field>
+
 					</group>
 				</sheet>
 			</form>

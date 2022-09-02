@@ -5,10 +5,10 @@ from datetime import date
 class HospttalLabtest(models.Model):
 	_name = 'hospital.labtest'
 	_description = 'Hospital Medical tests'
+	_rec_name = 'test_name'
 
 
-
-	name = fields.Char(string='Medical tests')
+	test_name = fields.Char(string='Medical tests')
 	
 	price = fields.Integer(string='Rate')
 

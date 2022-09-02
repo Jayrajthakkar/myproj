@@ -10,6 +10,7 @@
     'sequence':-500,
     'depends': ['base'],
     'data': ['security/ir.model.access.csv',
+    'wizard/ChangeAppointment.xml',
     'views/menu.xml',
     'views/Patient.xml',
     'views/Doctor.xml',

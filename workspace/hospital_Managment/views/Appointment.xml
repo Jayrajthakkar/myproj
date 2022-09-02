@@ -46,7 +46,6 @@
 						<field name="patient_id" widget='selection'></field>
 						<field name="speciality_id"></field>
 						<field name='verify_patient' widget='radio'></field>
-						<field name='Medicaltest_ids' widget='many2many_tags'></field>
 						<field name='visit_charge'></field>
 					</group>
 				</sheet>
